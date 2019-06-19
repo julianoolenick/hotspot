@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+   
+    <title>Status WIFI - Meta Distribuição</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/signin.css" rel="stylesheet">
+    
+
+</script>  
+  </head>
+
+<body class="text-center">
+<div id="wrap">
+    
+    
+
+    <div class="container">
+
+        <div class="row">
+            $(if error)
+                <div class="alert alert-danger">$(error)</div>
+            $(endif)
+
+            $(if login-by == 'trial')
+                <div class="alert alert-info">Acesso realizado 30 mini!</div>
+            $(elif login-by != 'mac')
+                <div class="alert alert-info">Bem Vindo $(username)!</div>
+            $(endif)
+        </div>
+
+        <div class="row">
+            <div class="panel panel-default">
+                <div class="panel-body">
+
+                    <table class="table table-striped">
+                        <tbody>
+                        <tr>
+                            <td>Endereço IP:</td>
+                            <td>$(ip)</td>
+                        </tr>
+                        <tr>
+                            <td>bytes enviado/baixado</td>
+                            <td>$(bytes-in-nice) / $(bytes-out-nice)</td>
+                        </tr>
+                        $(if session-time-left)
+                        <tr>
+                            <td>Tempo conectado / restante:</td>
+                            <td>$(uptime) / $(session-time-left)</td>
+                        </tr>
+                        $(else)
+                        <tr>
+                            <td>Tempo conectado:</td>
+                            <td>$(uptime)</td>
+                        </tr>
+                        $(endif)
+                        $(if refresh-timeout)
+                        <tr>
+                            <td>Atualização de status</td>
+                            <td>$(refresh-timeout)</td>
+                            $(endif)
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+ <p class="mt-5 mb-3 text-muted">&copy; <a href="https://www.netguard.com.br">Netguard</a></p>
+
+
+</div>
+
+<script src="js/jquery.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+
+</body>
+</html>
