@@ -16,7 +16,7 @@
 <div >
 <h2> Dados Acesso WIFI</h2>
 <?php 
-if ($_POST['inputsenha'] == "metawifi") {
+if ($_POST['inputsenha'] == "senha") {
 ?>
 
 <div class="table-responsive">
