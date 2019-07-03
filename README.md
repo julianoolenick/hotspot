@@ -9,36 +9,36 @@ e o externo no site de hospedagem e configura o banco de dados.
 E realizar as configurações
 
 Trocar o redireciomento do site apos suceso do login
-''
+```
 mikrotik/alogin.html window.location.href = "http://www.google.com.br"; 
-''
+```
 
 Tocar o site que externo que realiza do cadastro
-''
+```
 mikrotik/login.html <form id="form" method="post" action="https://www.site.com.br/hotspot/login.php" >
-''
+```
 
 Adicionar o banco de dados e conteundo 
-''
+```
 externo/dados.sql
-''
+```
 
 Altera configurações do banco de dados
-''
+```
 externo/db.php $MySQLi = new MySQLi("127.0.0.1", "root", "123456", "hotspot");
-''
+```
 
 Regra no mikrotik hotspot pra libera o  acesso ao www.site.com.br
-''
+```
 /ip hotspot walled-garden
 add dst-host=:^www.site.com.br
-''
+```
 
 Os dados seream salvo no banco de dadso e poderam ser visualizado em
-''
+```
 externo/dados.php 
 Onde é necesario alerar a senha if ($_POST['inputsenha'] == "senha") {?>
-''
+```
 
 ---------------------------------------------------------------------------
 
